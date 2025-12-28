@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CR0M80</title>
+  <meta name="description"
+    content="Senior Security Specialist, Developer, and Technology Leader. Expert in cybersecurity, penetration testing, and secure application development." />
+  <meta name="keywords"
+    content="security specialist, cyber security expert, penetration testing, ethical hacking, web development, technology leader" />
+  <meta name="theme-color" content="#00FF00" />
+
+  <!-- Social Meta Tags -->
+  <meta property="og:title" content="SAAD AMAR | CyberSecurity Specialist" />
+  <meta property="og:description" content="Senior Security Specialist, CTF Player, Forensics Player" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300FF41' d='M4 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z'/%3E%3C/svg%3E" />
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Matrix Background -->
+  <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+
+  <!-- Common Loader -->
+  <div class="common-loader" id="commonLoader">
+    <div class="common-loader-content">
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="terminal-button" style="background-color: #ff5f56"></div>
+          <div class="terminal-button" style="background-color: #ffbd2e"></div>
+          <div class="terminal-button" style="background-color: #27c93f"></div>
+          <div class="terminal-title">CR0M80@portfolio:~</div>
+        </div>
+        <div class="terminal-body">
+          <p class="status-line">> Initializing system...</p>
+          <p class="status-line">> Loading portfolio components...</p>
+          <p class="status-line">> Establishing secure connection...</p>
+          <p class="status-line">
+            > Welcome to the portfolio of
+            <span style="color: #4c006f">CR0M80</span>
+          </p>
+          <div class="progress-bar">
+            <div class="progress" id="commonLoaderProgress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Selection Screen -->
+  <div class="view-selector" id="viewSelector">
+    <div class="selector-content">
+      <h1 class="selector-title">CR0M80.portfolio</h1>
+      <p class="selector-subtitle">
+        Choose your preferred interface experience
+      </p>
+      <div class="view-options">
+        <div class="view-option" id="terminalOption">
+          <div class="option-icon">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <h3 class="option-title">Terminal Mode</h3>
+          <p class="option-description">
+            Experience an authentic terminal interface with command-line
+            navigation.
+          </p>
+        </div>
+        <div class="view-option" id="guiOption">
+          <div class="option-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h3 class="option-title">GUI Mode</h3>
+          <p class="option-description">
+            Browse through a modern graphical.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminal Interface -->
+  <div class="terminal-interface terminal-mode" id="terminalInterface">
+    <div class="terminal-top-bar">
+      <div class="terminal-window-controls">
+        <div class="terminal-window-button" style="background-color: #ff5f56" id="closeTerminal"></div>
+        <div class="terminal-window-button" style="background-color: #ffbd2e" id="minimizeTerminal"></div>
+        <div class="terminal-window-button" style="background-color: #27c93f" id="maximizeTerminal"></div>
+      </div>
+      <div class="terminal-window-title">CR0M80@portfolio:~</div>
+      <div style="width: 60px"></div>
+    </div>
+    <div class="terminal-content" id="terminalContent">
+      <div class="terminal-output">
+          <div class="ascii-art">
+            #       _____ _____   ___  __  __  ___   ___  
+            #      / ____|  __ \ / _ \|  \/  |/ _ \ / _ \ 
+            #     | |    | |__) | | | | \  / | (_) | | | |
+            #     | |    |  _  /| | | | |\/| |> _ <| | | |
+            #     | |____| | \ \| |_| | |  | | (_) | |_| |
+            #      \_____|_|  \_\\___/|_|  |_|\___/ \___/ 
+            #                                             
+            #                                             
+                  ██  CYBERSECURITY ENGINEER TERMINAL  ██
+                  ██         CR0M80@portfolio          ██
+        </div> 
+        <div style="color: var(--success)">[INFO] Terminal initialized successfully
+        </div>
+        <div>Type 'cr -help' for available commands</div>
+        <div>Use 'clear' to clear screen, 'cr -gui' to switch to GUI mode
+        </div>
+      </div>
+      <div class="terminal-input-container" id="currentInput">
+        <span class="terminal-prompt">CR0M80@portfolio:~$</span>
+        <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false" />
+        <span class="terminal-cursor"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUI Interface -->
+  <div class="gui-interface gui-mode" id="guiInterface">
+    <!-- Navigation -->
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">
+            <i class="fas fa-terminal"></i>
+            <span>CR0M80</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certifs.html">Certifications</a></li>
+            <li><a href="ctfs.html">CTFs Making</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#" id="switchToTerminal" style="color: var(--warning)">Terminal</a>
+            </li>
+          </ul>
+          <button class="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero">
+      <div class="grid-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-profile">
+            <div class="hero-img-wrapper">
+              <div class="profile-img">
+                <img src="media/images/pdp.jpg">
+              </div>
+            </div>
+          </div>
+          <h1 class="hero-name">AMAR SAAD</h1>
+          <div class="hero-title-container">
+            <h2 class="hero-title" id="typed-text"></h2>
+            <span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-description">
+            As I always say: "maykonsh rask mrab3 asat”.
+          </p>
+          <div class="hero-buttons">
+            <a href="ctfs.html" class="btn btn-primary">
+              <i class="fas fa-code"></i> DFIR by CR0M80
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+          <!-- <div class="hero-stats">
+            <div class="stat-item">
+              <i class="fas fa-project-diagram stat-icon"></i>
+              <span class="stat-number">03+</span>
+              <span class="stat-label">&emsp;&emsp;Projects&emsp;&emsp;</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users stat-icon"></i>
+              <span class="stat-number">01+</span>
+              <span class="stat-label">&emsp;&emsp;Clients&emsp;&emsp;</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-award stat-icon"></i>
+              <span class="stat-number">03+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Get to know me better</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Who's CR0M80 ?</h3>
+            <p>
+              I am currently a Cyber Defense Engineering student at the National School of Applied Sciences of Marrakech, part of Cadi Ayyad University.
+              I am deeply passionate about cybersecurity, with a strong interest in digital forensics and security analysis.
+              I actively participate in CTF competitions as a player with my team "5T4F1T", mainly in the Forensics category, where I analyze digital evidence, investigate artifacts, and reconstruct attack scenarios.
+            <p>
+              I am also a CTF creator, designing forensic challenges to help others learn through realistic and technical scenarios.
+            </p>
+            <p>
+              My nickname, CR0M80, is inspired by the famous detective "Crombo", known for his intelligence, attention to detail, and ability to solve complex cases.
+              This reflects my investigative mindset and my approach to cybersecurity, especially in forensics.
+            </p>
+              And as I often say when someone doesn’t follow instructions properly:
+              “Rask mrab3, asat”<br>
+              (A Moroccan expression meaning: do it properly and follow the instructions carefully)
+            </p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <i class="fas fa-shield-alt"></i>
+                <h4>CyberSecurity</h4>
+                <p>CyberSecurity Engineering</p>
+              </div>
+              <div class="about-stat">
+                <i class="fas fa-bug"></i>
+                <h4>CTF Player</h4>
+                <p>Captain & member of team 5T4F1T</p>
+              </div>
+              <div class="about-stat">
+                <i class="fas fa-code"></i>
+                <h4>CTF Creator</h4>
+                <p>Creating some DFIR challenges</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="about-image-wrapper">
+              <img
+                src="./media/images/profil.jpg"
+                alt="AMAR SAAD" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills & Expertise</h2>
+          <p>What I bring to the table</p>
+        </div>
+        <div class="skills-content">
+          <div class="skill-category">
+            <h3><i class="fas fa-shield-alt"></i> Security</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Networking</h4>
+                <span>93%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="93"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Web Security</h4>
+                <span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="50"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Network Security</h4>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Cryptography</h4>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Development</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Python</h4>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="85"></div>
+              </div>
+            </div>            
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>C</h4>
+                <span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>HTML</h4>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>MySQL</h4>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>PL/SQL</h4>
+                <span>35%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="35"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Kali Linux</h4>
+                <span>93%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="93"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>AutoPsy</h4>
+                <span>86%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="86"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>FTKImager</h4>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Volatility</h4>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h4>Wireshark</h4>
+                <span>89%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" data-level="89"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+            <p>Let's work together</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:s.amar0638@uca.ac.ma">s.amar0638@uca.ac.ma</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+212664433923">+212 664433923</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/amar-saad" target="_blank">From Here !</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/CR0M80" target="_blank">From Here !</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-medium"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Medium</h4>
+                        <a href="https://medium.com/@CR0M80" target="_blank">From Here !</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Availability</h4>
+                        <p>Currently available for Internship and freelance projects. You can contact me using the contact form on the right side.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Nouvelle section pour les images à droite -->
+            <div class="contact-images-section">
+                <div class="contact-image-wrapper image-1">
+                    <img src="./media/images/IMG_6944.png" alt="Image not loaded" class="contact-side-image">
+                </div>
+                <div class="contact-image-wrapper image-2">
+                    <img src="./media/images/IMG_5758.png" alt="Image not loaded" class="contact-side-image">
+                </div>
+                <div class="contact-image-wrapper image-3">
+                    <img src="./media/images/IMG_7040.jpg" alt="Image not loaded" class="contact-side-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://github.com/CR0M80" target="__blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amar-saad" target="__blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@CR0M80" target="__blank"><i class="fab fa-medium-m"></i></a>
+            <a href="https://tryhackme.com/p/CR0M80" target="__blank"><img src="https://assets.tryhackme.com/img/favicon.png" alt="TryHackMe" class="thm-icon"></a>
+          </div>
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifs.html">Certifications</a>
+            <a href="ctfs.html">CTFs Making</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <p class="copyright">© 2025 CR0M80. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+  <!-- EmailJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</body>
+
+</html>
