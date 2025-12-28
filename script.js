@@ -183,7 +183,7 @@ class TerminalPortfolio {
         this.changeDirectory(command);
       } else {
         this.addOutput(
-          `bash: ${command}: command not found\nType 'pf -help' for available commands.`,
+          `bash: ${command}: command not found\nType 'cr -help' for available commands.`,
           "error"
         );
       }
