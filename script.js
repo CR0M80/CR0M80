@@ -369,7 +369,7 @@ Recent Projects:
 
 Contact Information:
 
-Email:        s.amar0638@uca.ac.ma
+Email:        s.amar.sec@outlook.com
 Phone:        +212 664433923
 Availability: Currently available for freelance projects or Internship
 
