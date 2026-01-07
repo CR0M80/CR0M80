@@ -415,8 +415,17 @@ build innovative technology solutions.`;
         ➤ Issuing Organization: TryHackMe
         ➤ Year: 2025
         ➤ Certificate: https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-3CYUVATYV7.pdf
+  
+          2. Certified Computer Forensics Analyst (CCFA)
+        
+       - Professional certification focusing on digital forensics, including investigating computer systems, analyzing digital evidence, and reconstructing cyber incidents
+        
+        
+        ➤ Issuing Organization: eSecurity Institute
+        ➤ Year: 2026
+        ➤ Certificate: https://app.esecurityinstitute.com/certificates/dbjr05clyn
 
-           2. Palo Alto — Network Security Fundamentals
+           3. Palo Alto — Network Security Fundamentals
 
         - Foundational certification focused on network security concepts, firewalls, 
           threat prevention, and modern security architectures
@@ -425,7 +434,7 @@ build innovative technology solutions.`;
         ➤ Issuing Organization: Palo Alto
         ➤ Year: 2025
 
-           3. Comprehensive C — Udemy
+           4. Comprehensive C — Udemy
 
         - Completed a comprehensive course covering C programming, core syntax, 
           data structures, and problem-solving techniques
@@ -433,7 +442,7 @@ build innovative technology solutions.`;
         ➤ Issuing Organization: Udemy
         ➤ Year: 2023
 
-           4. Contribution & Technical Leadership — Bootcamp
+           5. Contribution & Technical Leadership — Bootcamp
 
         - Explained digital forensics concepts and created practical CTF-style challenges 
           during a cybersecurity bootcamp
